@@ -1,0 +1,12 @@
+{
+  "name": "yassified-wandb",
+  "version": "0.2.4",
+  "private": true,
+  "description": "Presentation-friendly titles and legends for Weights & Biases plots.",
+  "scripts": {
+    "test": "node --test tests/*.test.js"
+  },
+  "devDependencies": {
+    "jsdom": "^26.1.0"
+  }
+}

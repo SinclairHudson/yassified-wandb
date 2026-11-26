@@ -1,0 +1,103 @@
+/* All rules are scoped to the extension's enabled class and W&B's semantic names. */
+.yw-workspace-label-shell {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  padding: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: visible !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+.yw-workspace-label-dialog {
+  position: fixed !important;
+  left: var(--yw-editor-left) !important;
+  top: var(--yw-editor-top) !important;
+  width: min(360px, calc(100vw - 16px)) !important;
+  max-width: calc(100vw - 16px) !important;
+  max-height: calc(100vh - 16px) !important;
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 16px !important;
+  box-sizing: border-box !important;
+  border-radius: 8px;
+  background: var(--yw-editor-background, white);
+  box-shadow: 0 4px 24px #0003;
+  overflow: auto !important;
+  margin: 0 !important;
+  transform: none !important;
+}
+
+.yw-workspace-label-dialog .yw-original-run-field {
+  display: none !important;
+}
+
+.yw-workspace-label-note {
+  margin-top: 12px;
+  font: 12px/1.4 system-ui, sans-serif;
+  color: inherit;
+}
+
+.yw-legend-notice {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2147483647;
+  max-width: min(480px, calc(100vw - 32px));
+  padding: 12px 16px;
+  border: 1px solid #888;
+  border-radius: 6px;
+  background: #fff;
+  color: #222;
+  box-shadow: 0 3px 12px #0003;
+  font: 14px/1.4 system-ui, sans-serif;
+}
+
+.yw-enabled .yw-renamed-title {
+  font-size: var(--yw-title-size, 20px) !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* W&B wraps search matches in this class and gives them a yellow/bold treatment. */
+.yw-enabled .fuzzy-match {
+  background: transparent !important;
+  color: inherit !important;
+  font-weight: inherit !important;
+}
+
+.yw-enabled :is(
+  [data-test*="panel-title" i],
+  [data-testid*="panel-title" i],
+  [aria-label*="panel title" i],
+  [class*="panelTitle"],
+  [class*="panel-title"]
+) {
+  font-size: var(--yw-title-size, 20px) !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+}
+
+.yw-enabled :is(
+  [data-test*="legend" i],
+  [data-testid*="legend" i],
+  [aria-label*="legend" i],
+  [class*="legend" i]
+) {
+  font-size: var(--yw-legend-size, 16px) !important;
+  line-height: 1.35 !important;
+}
+
+.yw-enabled :is(
+  [data-test*="legend" i],
+  [data-testid*="legend" i],
+  [aria-label*="legend" i],
+  [class*="legend" i]
+) :is(span, div, button, label, a, text) {
+  font-size: var(--yw-legend-size, 16px) !important;
+  line-height: 1.35 !important;
+}

@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Yassified W&B",
+  "version": "0.2.4",
+  "description": "Presentation-friendly titles and legends for Weights & Biases plots.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://wandb.ai/*",
+    "https://forge.coreweave.com/wandb/*"
+  ],
+  "action": {
+    "default_title": "Yassified W&B",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://wandb.ai/*",
+        "https://forge.coreweave.com/wandb/*"
+      ],
+      "js": [
+        "settings.js",
+        "content.js",
+        "legend-editor.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  }
+}
